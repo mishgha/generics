@@ -1,5 +1,17 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
+class Test<T>{
+    T obj;
+    Test (T obj)
+    {
+        this.obj = obj;
+    }
+
+    public T getObject()
+    {
+        return this.obj;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         //Generics Provides us with increased type safety
@@ -7,6 +19,11 @@ public class Main {
         //Whereas the Object is the superclass of all other classes, and object reference can refer to any object.
         //and that's why object does runtime checking 
 
-        System.out.println("hello there");
+        Test<Integer> objInt = new Test<>(15);
+        System.out.println(objInt.getObject());
+
+        Test<String> objStr = new Test<>("GeeksForGeeks");
+        System.out.println(objStr.getObject());
+
     }
 }
